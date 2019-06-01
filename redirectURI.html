@@ -16,8 +16,8 @@ var code;
 document.getElementById("demo").innerHTML = location.search;
 
 if(location.search.match(/[?]code=([^&]+)/g)){
-  
-document.getElementById("test").innerHTML =location.search.match(/[?]code=([^&]+)/g);
+code=location.search.match(/[?]code=([^&]+)/g);
+document.getElementById("test").innerHTML =code;
 
 }
   else{
