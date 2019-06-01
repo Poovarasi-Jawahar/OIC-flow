@@ -6,11 +6,13 @@
 <body style="background-image:url('https://github.vodafone.com/pages/paradarshi-jena4/Apix-OpenId-Demo-App/background_white.PNG');">
 
 <p id="demo"></p>
+<p id="test"></p>
 
 <script>
 var code;
 
 document.getElementById("demo").innerHTML = location.search;
+document.getElementById("test").innerHTML =location.search.match(/[?]code=([^&]+)/g);
 
 </script>
 <a href="Generate APIX Access Token.html" target="_blank">Generate Access Token</a>
