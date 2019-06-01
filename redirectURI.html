@@ -7,12 +7,21 @@
 
 <p id="demo"></p>
 <p id="test"></p>
+<p id="test1"></p>
 
 <script>
 var code;
 
 document.getElementById("demo").innerHTML = location.search;
+
+if(location.search.match(/[?]code=([^&]+)/g)){
+code = location.search.match(/[?]code=([^&]+)/g)[1];
 document.getElementById("test").innerHTML =location.search.match(/[?]code=([^&]+)/g);
+document.getElementById("test1").innerHTML=code;
+}
+  else{
+    document.getElementById("test1").innerHTML="Error! Code not found";
+  }
 
 </script>
 <a href="Generate APIX Access Token.html" target="_blank">Generate Access Token</a>
