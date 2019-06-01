@@ -15,8 +15,7 @@ document.getElementById("demo").innerHTML = location.search;
 
 if(location.search.match(/[?]code=([^&]+)/g)){
 var code=location.search.match(/[?]code=([^&]+)/g);
-var str=code.split("=");
-document.getElementById("test").innerHTML =str;
+document.getElementById("test").innerHTML =code;
 
 }
   else{
