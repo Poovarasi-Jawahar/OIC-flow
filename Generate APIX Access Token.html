@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html,body{height:100%}
+</style>
+</head>
+<body style="background-image:url('background_white.PNG');background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;height: 100%;">
+
+<h2>Generate Access Token</h2>
+
+<form action="https://apistagingref.developer.vodafone.com/oauth2/token" target="_blank" method="POST">
+  
+  Grant Type:<br>
+  <input type="text" name="grant_type" value="grant_type">
+  <br>
+  Client ID:<br>
+  <input type="text" name="client_id" value="client_id">
+  <br>
+  Client Secret:<br>
+  <input type="text" name="client_secret" value="client_secret">
+  <br>
+  Code:<br>
+  <input type="text" name="code" value="code">
+  <br>
+  Redirect URI:<br>
+  <input type="text" name="redirect_uri" value="redirect_uri">
+  <br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+<p>Please fill the details above and click "Submit" button for generating access token</p>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>OIC Work Flow</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+html,body{height:100%}
+</style>
+</head>
+
+<body style="background-image:url('background_red.PNG');background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;height: 100%;">
+
+<h2>OPEN ID CONNECT WORK FLOW</h2>
+
+<form action="https://apistagingref.developer.vodafone.com/oauth2/authorize?" target="_blank">
+  Client ID:<br>
+  <input type="text" name="client_id" value="client_id">
+  <br>
+  Redirect URI:<br>
+  <input type="text" name="redirect_uri" value="redirect_uri">
+  <br>
+  Response Type:<br>
+  <input type="text" name="response_type" value="response_type">
+  <br>
+  State:<br>
+  <input type="text" name="state" value="state">
+  <br>
+  Scope:<br>
+  <input type="text" name="scope" value="scope">
+  <br>
+  Acr Values:<br>
+  <input type="text" name="acr_values" value="acr_values">
+  <br>
+  Login Hint:<br>
+  <input type="text" name="login_hint" value="login_hint">
+  
+  <br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+<p>Please fill the details above and click "Submit" button for generating Auth Code.</p>
+
+<a href="Generate APIX Access Token.html" target="_blank">Generate Access Token</a>
+
+</body>
+</html>
