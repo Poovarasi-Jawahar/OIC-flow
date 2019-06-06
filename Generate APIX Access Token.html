@@ -14,19 +14,19 @@ html,body{height:100%}
 <form action="https://apistagingref.developer.vodafone.com/oauth2/token" method="POST">
   
   Grant Type:<br>
-  <input type="text" name="grant_type" value="authorization_code" readonly>
+  <input type="text" name="grant_type" value="authorization_code" readonly required>
   <br>
   Client ID:<br>
-  <input type="text" name="client_id" value="PTUzRIUBAPHWpSCYaCoYr854MGCwtWL8">
+  <input type="text" name="client_id" value="PTUzRIUBAPHWpSCYaCoYr854MGCwtWL8" required>
   <br>
   Client Secret:<br>
-  <input type="text" name="client_secret" value="bjczOLPd3Oi86glQ">
+  <input type="text" name="client_secret" value="bjczOLPd3Oi86glQ" required>
   <br>
   Code:<br>
-  <input type="text" name="code" value="code">
+  <input type="text" name="code" value="code" required>
   <br>
   Redirect URI:<br>
-  <input type="text" name="redirect_uri" value="https://poovarasi-jawahar.github.io/OIC-flow/redirectURI.html">
+  <input type="text" name="redirect_uri" value="https://poovarasi-jawahar.github.io/OIC-flow/redirectURI.html" required>
   <br><br>
   <input type="submit" value="Submit">
 </form> 
