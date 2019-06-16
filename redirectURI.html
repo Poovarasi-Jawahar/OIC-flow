@@ -20,10 +20,16 @@ img {
 }
   
 .field{background-color:#EAEDED;padding:10px 20px;border: 1px solid #ccc;
-  border-radius: 4px;float: left;margin: 6px 0;font-family:Verdana,sans-serif;height:20px;width:165px;}
+  border-radius: 4px;float: left;margin: 6px 0;font-family:Verdana,sans-serif;height:20px;width:153px;}
   
-.value{border: 1px solid #ccc;
-  border-radius: 4px;margin: 6px 0;font-family:Verdana,sans-serif;height:20px;width:100px;text-align:center;}
+#value{width: 20%;height:16px;
+  padding:12px 10px;
+  margin: 6px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  align="left";
+  display: inline-block;
+  font-family:Verdana,sans-serif;}
   
   </style>
   </head>
@@ -32,22 +38,20 @@ img {
 <div class="container">
 <br>
 <img style="width:50px;height:50px" src="logo.png"/><br>
-  <div class="field">Authorization Code</div><div class="value"><p id="demo"></p></div>
+  <div class="field">Authorization Code</div><div id="value"></div>
   </div>
 
 <script>
-
-document.getElementById("demo").innerHTML = location.search;
 
 if(location.search.match(/[?]code=([^&]+)/g)){
 var code=location.search.match(/[?]code=([^&]+)/g);
 var str=code.toString();
   var res=str.split("=");
-    document.getElementById("demo").innerHTML = res[1];
+    document.getElementById("value").innerHTML = res[1];
 
 }
   else{
-    document.getElementById("demo").innerHTML="Error! Code not found";
+    document.getElementById("value").innerHTML="Error! Code not found";
   }
 
 </script>
