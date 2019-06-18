@@ -5,6 +5,16 @@
 <title>Generate Auth Code</title>
   <link rel = "icon" href = "logo.png"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script>
+jQuery(document).ready(function($) {
+  $(".myform").submit(function() {
+    $(this).find(":input").filter(function() { return !this.value; }).attr("disabled", "disabled");
+    return true; 
+  });
+});
+	
+</script>
 <style>
 html,body{height:107%;}
 input[type=text]{
