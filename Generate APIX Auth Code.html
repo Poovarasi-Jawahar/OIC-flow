@@ -16,7 +16,103 @@ jQuery(document).ready(function($) {
 	
 </script>
 <style>
-html,body{height:107%;}
+html,body{height:107%;font-family:Verdana,sans-serif;}
+
+.container{padding:0.01em 20px;width:900px;
+  height: 600px;
+  margin: auto;border: 5px solid #ccc;
+  border-radius: 10px;border-bottom:none;
+}
+
+.navigation{
+  list-style-type: none;
+  padding:0px;
+  overflow: hidden;
+  width:910px;
+  font-family:Verdana,sans-serif;
+ height:60px;
+ line-height:40px;
+
+}
+
+#first,#second,#third{float:left;margin:10px;}
+
+#first {
+      width: 280px;
+      height: 40px;
+      position: relative;
+      background: #3498DB;
+      color:#FDFEFE;
+      text-align:center;
+      
+    }
+    #first:before {
+      content: "";
+      position: absolute;
+      right: -20px;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-left: 20px solid #3498DB;
+      border-top: 20px solid transparent;
+      border-bottom: 20px solid transparent;
+ 
+    }
+
+#second {
+      width: 280px;
+      height: 40px;
+      position: relative;
+      background: #3498DB;
+      color:#FDFEFE;
+      text-align:center;
+      
+    }
+#second:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-left: 20px solid white;
+      border-top: 20px solid transparent;
+      border-bottom: 20px solid transparent;
+    }
+    #second:before {
+      content: "";
+      position: absolute;
+      right: -20px;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-left: 20px solid #3498DB;
+      border-top: 20px solid transparent;
+      border-bottom: 20px solid transparent;
+ 
+    }
+
+#third {
+      width: 280px;
+      height: 40px;
+      position: relative;
+      background: #EAEDED;
+      color:#909497;
+      text-align:center;
+      
+    }
+#third:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-left: 20px solid white;
+      border-top: 20px solid transparent;
+      border-bottom: 20px solid transparent;
+    }
+
 input[type=text]{
 width: 50%;
   padding:12px 20px;
@@ -28,48 +124,35 @@ width: 50%;
   float: left;
   font-family:Verdana,sans-serif;
 }
-
 input[type=text]:focus{box-shadow: 0 0 5px #6C3483}
-
 .auth-code{padding:10px 20px;border: 1px solid #ccc;
   border-radius: 5px;background-color:#DC143C;color:#FDFEFE;font-family:Verdana,sans-serif;font-size:18px;cursor: pointer;box-shadow: 0 0 5px #6C3483;}
-
 .auth-code:hover{background-color:green;}
 
-
-.container{padding:0.01em 20px;width:900px;
-  height: 500px;
-  margin: auto;border: 5px solid #ccc;
-  border-radius: 10px;
-  
-}
-
-
 .token-container{padding:0.01em 20px;width:900px;
-  height: 120px;
+  height: 95px;
   margin: auto;border: 5px solid #ccc;
-  border-radius: 10px;
-  background-color:#EAEDED;
+  border-top:none;border-radius: 0px 0px 10px 10px;
 }
-
 .field{background-color:#EAEDED;padding:10px 20px;border: 1px solid #ccc;
   border-radius: 4px;float: left;margin: 6px 0;font-family:Verdana,sans-serif;height:20px;width:125px;}
-
 .footer{padding:0.01em 20px;width:900px;background-color:#EAEDED;margin: auto;border-left: 5px solid #ccc;
   border-right: 5px solid #ccc;border-bottom: 5px solid #ccc;
-  border-radius: 10px;height:110px;}
-
+  border-radius: 10px 10px 0px 0px;height:112px;border-bottom:none;}
 .token-link{color:#FDFEFE;text-decoration: none;font-family:Verdana,sans-serif;font-size:18px;cursor: pointer;box-shadow: 0 0 5px #6C3483;border-radius: 5px;background-color:#DC143C;padding:10px 20px;border: 1px solid #ccc;}
-
 .token-link:hover{background-color:green;}
-
 </style>
 </head>
 
 <body>
-<br><br>
+<br>
 <div class="container">
-<h1 style="font-family:Verdana,sans-serif"><img style="width:40px" src="logo.png"/> OPEN ID CONNECT WORK FLOW</h1>
+<center><h2><img style="width:40px;height:40px;" src="logo.png"/> OPEN ID CONNECT WORK FLOW</h2></center><hr>
+<ul class="navigation">
+<li id="first">Home</li>
+<li id="second">Auth Code</li>
+<li id="third">Access Token</li>
+</ul>
 <form class="myform" action="https://apistagingref.developer.vodafone.com/oauth2/authorize?" target="_blank">
   <div class="field">Client ID</div>
   <input type="text" name="client_id" value="PTUzRIUBAPHWpSCYaCoYr854MGCwtWL8" required>
@@ -95,15 +178,16 @@ input[type=text]:focus{box-shadow: 0 0 5px #6C3483}
 </div>
 <div class="footer">
 <p style="font-family:Verdana,sans-serif;">Please fill the details above and click on the below "Get Auth Code" button for generating Authorization Code.</p>
-  <input class="auth-code" type="submit" value="Get Auth Code">
+  <input class="auth-code" type="submit" value="Generate Auth Code">
 <br>
 </div>
 </form> 
-<br>
 <div class="token-container">
-<p style="font-family:Verdana,sans-serif;">Please click on the below "Get Access Token" button for generating Access Token.</p><br>
-<a class="token-link" href="Generate APIX Access Token.html" target="_blank">Get Access Token</a>
 <br>
+<br>
+<a class="token-link" href="Home.html">&laquo; Prev</a>
+<a class="token-link" style="float:right" href="Generate APIX Access Token.html">Next &raquo;</a>
 </div>
+<br>
 </body>
 </html>
