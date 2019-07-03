@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>OPEN ID CONNECT WORK FLOW</title>
+  <link rel = "icon" href = "logo.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+html,body{height:100%;font-family:Verdana,sans-serif;}
+.container{padding:0.01em 20px;width:900px;
+  height: 500px;
+  margin: auto;border: 5px solid #ccc;
+  border-radius: 10px;
+  
+}
+.navigation{
+  list-style-type: none;
+  padding:0px;
+  overflow: hidden;
+  width:910px;
+  font-family:Verdana,sans-serif;
+ height:60px;
+ line-height:40px;
+
+}
+
+#first,#second,#third{float:left;margin:10px;}
+
+#first {
+      width: 280px;
+      height: 40px;
+      position: relative;
+      background: #3498DB;
+      color:#FDFEFE;
+      text-align:center;
+      
+    }
+    #first:before {
+      content: "";
+      position: absolute;
+      right: -20px;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-left: 20px solid #3498DB;
+      border-top: 20px solid transparent;
+      border-bottom: 20px solid transparent;
+ 
+    }
+
+#second {
+      width: 280px;
+      height: 40px;
+      position: relative;
+      background: #EAEDED;
+      color:#909497;
+      text-align:center;
+      
+    }
+#second:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-left: 20px solid white;
+      border-top: 20px solid transparent;
+      border-bottom: 20px solid transparent;
+    }
+    #second:before {
+      content: "";
+      position: absolute;
+      right: -20px;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-left: 20px solid #EAEDED;
+      border-top: 20px solid transparent;
+      border-bottom: 20px solid transparent;
+ 
+    }
+
+#third {
+      width: 280px;
+      height: 40px;
+      position: relative;
+      background: #EAEDED;
+      color:#909497;
+      text-align:center;
+      
+    }
+#third:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-left: 20px solid white;
+      border-top: 20px solid transparent;
+      border-bottom: 20px solid transparent;
+    }
+
+.start{color:#FDFEFE;text-decoration: none;font-family:Verdana,sans-serif;font-size:18px;cursor: pointer;box-shadow: 0 0 5px #6C3483;border-radius: 5px;padding:10px 20px;border: 1px solid #ccc;float:right;background-color:#DC143C;}
+
+
+.start:hover{background-color:green;}
+
+</style>
+</head>
+<body>
+<br>
+<div class="container">
+<center><h2><img style="width:40px;height:40px;" src="logo.png"/> OPEN ID CONNECT WORK FLOW</h2></center><hr>
+<ul class="navigation">
+<li id="first">Home</li>
+<li id="second">Auth Code</li>
+<li id="third">Access Token</li>
+</ul>
+<p>This Web page is intended to provide understanding of Open ID Connect work flow. It includes sequential APIX-Oauth API requests to be made in order to successfully authenticate using Open ID Connect flow.</p>
+<a class="start" href="Generate APIX Auth Code.html">Start</a>
+</div>
+</body>
+</html>
