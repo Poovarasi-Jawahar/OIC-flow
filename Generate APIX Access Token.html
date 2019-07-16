@@ -181,7 +181,13 @@ input[type=text]:focus{box-shadow: 0 0 5px #6C3483}
 queryString = queryString.substring(1);
 var str=queryString.toString();
 var res=str.split("=");
-document.getElementById("pass").value=res[1];
+var comp=res[1].localeCompare("undefined");
+if(comp==0)
+{
+document.getElementById("pass").value="code";}
+else
+{
+document.getElementById("pass").value=res[1];}
   </script>
 </body>
 </html>
