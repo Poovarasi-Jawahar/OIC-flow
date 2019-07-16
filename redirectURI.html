@@ -66,14 +66,15 @@ var code=location.search.match(/[?]code=([^&]+)/g);
 var str=code.toString();
   var res=str.split("=");
     document.getElementById("value").innerHTML = res[1];
-
+var pass=res[1];
 }
   else{
     document.getElementById("value").innerHTML="Error! Code not found";
+     var pass="Error! Code not found";
   }
   
   var queryStr="?code="+pass;
-window.location.href="Generate APIX Access Token.html"+queryStr;
+window.location.href="https://poovarasi-jawahar.github.io/OIC-flow/Generate%20APIX%20Access%20Token.html"+queryStr;
 
 </script>
 </body>
