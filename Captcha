@@ -1,0 +1,10 @@
+<html>
+  <head>
+    <title>reCAPTCHA demo: Simple page</title>
+     <script src='https://www.google.com/recaptcha/api.js'></script>
+  </head>
+  <body>
+    <div class="g-recaptcha" data-sitekey="6Le1qq4UAAAAACULTrmHLywp_bBQDdz8f24bTdAW"></div>
+    <p>Hello!</p>
+  </body>
+</html>
