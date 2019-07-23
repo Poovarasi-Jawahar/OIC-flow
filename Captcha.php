@@ -1,3 +1,25 @@
+<?php
+if(isset($_GET['submit'])){
+$url='https://www.google.com/recaptcha/api/siteverify';
+$privatekey="6Lc6rK4UAAAAALgKLMWA_02sEgnBfx2bT-BrDp4x";
+$response=file_get_contents($url."?secret=".$privatekey."&response="$POST['g-recaptcha-response']."&remoteip=".$_SERVER['REMOTE_ADDR']);
+$data=json_decode($response);
+if(isset($data->success) AND $data->success==true){
+header('Location:
+}
+else{
+
+}
+
+}
+
+
+
+
+
+?>
+
+
 <html>
   <head>
     <title>reCAPTCHA demo: Simple page</title>
@@ -21,7 +43,7 @@
   <input type="text" name="login_hint" value="login_hint">
       <div class="g-recaptcha" data-sitekey="6Lc6rK4UAAAAAGqlap8ylhIxYzWgvbSEh1kIqr8M"></div>
   <br>
-  <input type="submit" value="Submit" style="font-size:150%">
+  <input name="submit" type="submit" value="Submit" style="font-size:150%">
 </form> 
   </body>
 </html>
