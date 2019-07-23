@@ -5,27 +5,30 @@ $privatekey="6Lc6rK4UAAAAALgKLMWA_02sEgnBfx2bT-BrDp4x";
 $response=file_get_contents($url."?secret=".$privatekey."&response="$POST['g-recaptcha-response']."&remoteip=".$_SERVER['REMOTE_ADDR']);
 $data=json_decode($response);
 if(isset($data->success) AND $data->success==true){
-header('Location:
+header('Location:Captcha.php?CaptchaPass=True');
 }
 else{
-
+header('Location:Captcha.php?CaptchaFail=True');
 }
 
 }
-
-
-
-
 
 ?>
 
-
+<!DOCTYPE html>
 <html>
   <head>
     <title>reCAPTCHA demo: Simple page</title>
      <script src="https://www.google.com/recaptcha/api.js"></script>
   </head>
   <body>
+    <h1>Captcha</h1>
+    <?php if(isset($_GET['CaptchaPass'])){ ?>
+    <div>Message Sent</div>
+    <?php } ?>
+    <?php if(isset($_GET['CaptchaFail'])){ ?>
+    <div>Captcha Failed. Please try again!</div>
+    <?php } ?>
     <form action="https://apistagingref.developer.vodafone.com/oauth2/authorize?">
   <p>Client ID:</p>
   <input type="text" name="client_id" value="client_id">
