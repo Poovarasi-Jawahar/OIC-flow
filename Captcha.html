@@ -1,14 +1,13 @@
 <html>
   <head>
     <title>reCAPTCHA demo: Simple page</title>
-     <script src="https://www.google.com/recaptcha/api.js?render=6Le1qq4UAAAAACULTrmHLywp_bBQDdz8f24bTdAW"></script>
-    <script>grecaptcha.ready(function(){
-        grecaptcha.execute('6Le1qq4UAAAAACULTrmHLywp_bBQDdz8f24bTdAW',{action:'https://poovarasi-jawahar.github.io/OIC-flow/Home.html'});
-      });
-    </script>
+     <script src="https://www.google.com/recaptcha/api.js"></script>
   </head>
   <body>
-    
-    <p>Hello!</p>
+    <form action="?" method="POST">
+      <div class="g-recaptcha" data-sitekey="6Lc6rK4UAAAAAGqlap8ylhIxYzWgvbSEh1kIqr8M"></div>
+      <br/>
+      <input type="submit" value="Submit">
+    </form>
   </body>
 </html>
