@@ -105,12 +105,11 @@ html,body{height:103%;font-family:Verdana,sans-serif;}
 
 
 input[type=text]{
-width: 50%;
+width: 61.15%;
   padding:12px 20px;
   margin: 6px 0;
   border: 1px solid #ccc;
   border-radius: 4px;
-  align="left";
   display: inline-block;
   float: left;
   font-family:Verdana,sans-serif;
@@ -118,12 +117,11 @@ width: 50%;
 input[type=text]:focus{box-shadow: 0 0 5px #6C3483}
   
 input[type=password]{
-width: 50%;
+width: 61.15%;
   padding:12px 20px;
   margin: 6px 0;
   border: 1px solid #ccc;
   border-radius: 4px;
-  align="left";
   display: inline-block;
   float: left;
   font-family:Verdana,sans-serif;
@@ -132,6 +130,9 @@ input[type=password]:focus{box-shadow: 0 0 5px #6C3483}
 
 .field{background-color:#EAEDED;padding:10px 20px;border: 1px solid #ccc;
   border-radius: 4px;float: left;margin: 6px 0;font-family:Verdana,sans-serif;height:20px;width:125px;}
+.center{margin:auto;width:687px;}
+.auth-center{margin:auto;width:220px;}
+.recaptcha-center{margin:auto;width:300px;}
 .footer{padding:0.01em 20px;width:900px;background-color:#EAEDED;margin: auto;border-left: 5px solid #ccc;
   border-right: 5px solid #ccc;border-bottom: 5px solid #ccc;
   border-radius: 10px 10px 0px 0px;height:110px;border-bottom:none;}
@@ -219,21 +220,21 @@ cursor: pointer;
 <li id="third">Access Token</li>
 </ul>
 <form action="https://apistagingref.developer.vodafone.com/oauth2/token" method="POST">
-<div class="field">Grant Type</div>
-  <input style="cursor: none;" type="text" name="grant_type" value="authorization_code" readonly required><p style="display: inline-block;text-align:center"><button class="icon"><i class="material-icons" style="color:#EC7063;font-size:26px;">info_outline</i></button></p><br>
-<div class="field">Client ID</div>
-  <input type="password" name="client_id" value="PTUzRIUBAPHWpSCYaCoYr854MGCwtWL8" required><p style="display: inline-block;text-align:center"><button class="icon"><i class="material-icons" style="color:#EC7063;font-size:26px;">info_outline</i></button></p><br>
-<div class="field">Client Secret</div>
-  <input type="password" name="client_secret" value="bjczOLPd3Oi86glQ" required><p style="display: inline-block;text-align:center"><button class="icon"><i class="material-icons" style="color:#EC7063;font-size:26px;">info_outline</i></button></p><br>
-<div class="field">Code</div>
-  <input id="pass" type="text" name="code" value="code" required><p style="display: inline-block;text-align:center"><button class="icon"><i class="material-icons" style="color:#EC7063;font-size:26px;">info_outline</i></button></p><br>
-<div class="field">Redirect URI</div>
-  <input type="text" name="redirect_uri" value="https://poovarasi-jawahar.github.io/OIC-flow/redirectURI.html" required><p style="display: inline-block;text-align:center"><button class="icon"><i class="material-icons" style="color:#EC7063;font-size:26px;">info_outline</i></button></p><br>
-<div class="g-recaptcha" data-sitekey="6Lc6rK4UAAAAAGqlap8ylhIxYzWgvbSEh1kIqr8M" data-callback="recaptcha_callback"></div>
+<div class="center"><div class="field">Grant Type</div>
+  <input style="cursor: none;" type="text" name="grant_type" value="authorization_code" readonly required><p style="display: inline-block;text-align:center"><button class="icon"><i class="material-icons" style="color:#EC7063;font-size:26px;">info_outline</i></button></p><br></div>
+<div class="center"><div class="field">Client ID</div>
+  <input type="password" name="client_id" value="PTUzRIUBAPHWpSCYaCoYr854MGCwtWL8" required><p style="display: inline-block;text-align:center"><button class="icon"><i class="material-icons" style="color:#EC7063;font-size:26px;">info_outline</i></button></p><br></div>
+<div class="center"><div class="field">Client Secret</div>
+  <input type="password" name="client_secret" value="bjczOLPd3Oi86glQ" required><p style="display: inline-block;text-align:center"><button class="icon"><i class="material-icons" style="color:#EC7063;font-size:26px;">info_outline</i></button></p><br></div>
+<div class="center"><div class="field">Code</div>
+  <input id="pass" type="text" name="code" value="code" required><p style="display: inline-block;text-align:center"><button class="icon"><i class="material-icons" style="color:#EC7063;font-size:26px;">info_outline</i></button></p><br></div>
+<div class="center"><div class="field">Redirect URI</div>
+  <input type="text" name="redirect_uri" value="https://poovarasi-jawahar.github.io/OIC-flow/redirectURI.html" required><p style="display: inline-block;text-align:center"><button class="icon"><i class="material-icons" style="color:#EC7063;font-size:26px;">info_outline</i></button></p><br></div>
+<div class="recaptcha-center"><div class="g-recaptcha" data-sitekey="6Lc6rK4UAAAAAGqlap8ylhIxYzWgvbSEh1kIqr8M" data-callback="recaptcha_callback"></div></div>
 </div>
 <div class="footer">
 <p style="font-family:Verdana,sans-serif;">Please fill the details above and click on the below "Get Access Token" button for generating Access Token.</p>
-  <input id="token" type="submit" value="Get Access Token" disabled>
+  <div class="auth-center"><input id="token" type="submit" value="Get Access Token" disabled></div>
 <br>
 </div>
 </form> 
