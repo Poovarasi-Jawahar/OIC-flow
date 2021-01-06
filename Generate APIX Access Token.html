@@ -5,6 +5,17 @@
 <title>Generate Access Token</title>
 <link rel = "icon" href = "logo.png"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="jquery-3.5.1.js"></script>
+  <script>
+    $('#myForm').ajaxForm({
+        url : 'https://apistagingref.developer.vodafone.com/oauth2/token', // or whatever
+        dataType : 'json',
+        success : function (response) {
+            alert("The server says: " + response);
+        }
+    })
+;
+  </script>
 <style>
 html,body{height:103%;font-family:Verdana,sans-serif;}
 
@@ -225,7 +236,7 @@ cursor: pointer;
 <li id="second">Auth Code</li>
 <li id="third">Access Token</li>
 </ul>
-<form action="https://apistagingref.developer.vodafone.com/oauth2/token" method="POST">
+<form id="myForm" action="https://apistagingref.developer.vodafone.com/oauth2/token" method="POST">
 <div class="center"><div class="field">Grant Type</div>
   <input style="cursor: none;" type="text" name="grant_type" value="authorization_code" readonly required>&nbsp<p style="display: inline-block;text-align:center"><button type="button" class="icon"><i class="material-icons" style="color:#EC7063;font-size:26px;">info_outline</i></button></p><br></div>
 <div class="center"><div class="field">Client ID</div>
@@ -250,6 +261,7 @@ cursor: pointer;
 <a class="token-link" style="float:left" href="Generate APIX Auth Code.html">&laquo; Prev</a>
 </div>
 <br>
+
 <script>
   var queryString = window.location.search;
 queryString = queryString.substring(1);
